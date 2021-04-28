@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Portifólio</title>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <div class="container">
+    <img class="profile" src="./img/profile.png" />
+    <h2>Michael Portes dos Santos </h2>
+    <p>Estudante</p>
+
+    <div class="info-principal">
+      <div class="git">
+        <a href="https://github.com/michalPortes?tab=repositories">
+          <i data-feather="github"></i>
+        </a>
+      </div>
+      <div class="insta">
+        <a href="https://www.instagram.com/_michaelportes/">
+          <i data-feather="instagram"></i>
+        </a>
+      </div>
+      <div class="linkdin">
+        <a href="https://www.linkedin.com/in/michael-portes-5217ab160/">
+          <i data-feather="linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 2500,
+        density: { enable: true, value_area: 989.1476416322727 }
+      },
+      color: {
+        value: "#ffffff"
+      },
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#000000" },
+        polygon: { nb_sides: 5 },
+        image: { src: "img/github.svg", width: 100, height: 100 }
+      },
+      opacity: {
+        value: 0.48927153781200905,
+        random: false,
+        anim: { enable: true, speed: 0.2, opacity_min: 0, sync: false }
+      },
+      size: {
+        value: 2,
+        random: true,
+        anim: { enable: true, speed: 2, size_min: 0, sync: false }
+      },
+      line_linked: {
+        enable: false,
+        distance: 150,
+        color: "#000000",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: { enable: false, rotateX: 600, rotateY: 1200 }
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: {
+          enable: true,
+          mode: "bubble"
+        },
+        onclick: { enable: true, mode: "push" },
+        resize: true
+      },
+      modes: {
+        grab: { distance: 350, line_linked: { opacity: 1 } },
+        bubble: {
+          distance: 63.91608391608392,
+          size: 2,
+          duration: 3,
+          opacity: 1,
+          speed: 3
+        },
+        repulse: { distance: 200, duration: 0.4 },
+        push: { particles_nb: 4 },
+        remove: {
+          particles_nb: 2
+        }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+<script>
+  const setupButton = document.getElementById("setup-button");
+  const goBackButton = document.getElementById("go-back-button");
+
+  setupButton.addEventListener("click", showContent);
+  goBackButton.addEventListener("click", hideContent);
+
+  function showContent() {
+    document.getElementById("secondary-content").classList.remove("hide");
+    document.getElementById("secondary-content").classList.add("show");
+  }
+
+  function hideContent() {
+    document.getElementById("secondary-content").classList.remove("show");
+    document.getElementById("secondary-content").classList.add("hide");
+  }
+
+</script>
+
+</html>
